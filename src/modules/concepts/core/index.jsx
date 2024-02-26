@@ -1,5 +1,4 @@
 
-"An alternative for receiving props is object destructuring."
 const CoreConcept = ({title, image, description}) => {
   return (
     <div>
