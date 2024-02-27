@@ -1,11 +1,11 @@
 import { CORE_CONCEPTS } from "../../data.js";
+import Section from "../section/index.jsx";
 import CoreConcept from "./core/index.jsx";
 
 const Concepts = () => {
   return (
     <>
-      <section id="core-concepts">
-        <h2>Core Concepts</h2>
+      <Section title="Core Concepts" id="core-concepts">
         <ul>
           {CORE_CONCEPTS.map((item, _) => (
             <li key={item.title}>
@@ -13,7 +13,7 @@ const Concepts = () => {
             </li>
           ))}
         </ul>
-      </section>
+      </Section>
     </>
   );
 };

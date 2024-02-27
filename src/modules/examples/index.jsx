@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { EXAMPLES } from "../../data.js";
-import TabButton from "./tab-button/index.jsx"
+import TabButton from "./tab-button/index.jsx";
+import Section from "../section/index.jsx";
 const Examples = () => {
   const [selectedTab, setSelectedTab] = useState(null);
 
@@ -22,8 +23,7 @@ const Examples = () => {
 
   return (
     <>
-      <section id="examples">
-        <h2>Examples</h2>
+      <Section title="Examples" id="examples">
         <menu>
           {EXAMPLES.map(({ id, title }) => (
             <div key={id}>
@@ -37,9 +37,8 @@ const Examples = () => {
           ))}
         </menu>
         <div className="tab-content">{renderTabContent(selectedTab)}</div>
-      </section>
+      </Section>
     </>
   );
 };
-
 export default Examples;
